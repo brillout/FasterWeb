@@ -57,7 +57,7 @@ The assumption, that the website is provided with the secure hash of the require
   - precompute the secure hash of the source code
   - send the secure hash along the URL of the source code
 
-For organisations trusting the CDN this may seem unnecessary and even represent a drawback since the computation of the secure hash requires computation time and therefore induces a delay.
+For organisations trusting the CDN this may seem unnecessary and even represent a drawback since the computation of the secure hash of the source code delivered by the CDN requires computation time and therefore induces a delay.
 That said, it is to be considered that the computation of the secure hash is also useful for the Solution to Problem 3.
 Since we need the secure hash for the Solution to Problem 3 anyways, we can consider this Solution to be "computationally for free".
 
