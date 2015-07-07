@@ -3,18 +3,25 @@ This proposal's goal is to reduce the average time necessary for loading common 
 
 The goal is achieved by
  - solving the problems associated with using a CDN
- - introducing an "untrusted shared cache"
+ - introducing an _untrusted shared cache_
 
 Solving the CDN problems increases the incentive of using CDNs which have low latency and high bandwidth.
 
-The proposed _untrusted shared cache_ delivers source code from cache that, in certain situations, would normally require the loading of the source code over the network.
+In certain situations, the proposed "untrusted shared cache" can deliver source code from its cache that normally would require to be loaded over the network. In these cases the untrusted shared cache therefore saves network usage.
 
 
-The proposed solutions can rather easily be implemented thanks to recently created tools and technologies. 
-The solutions are compatible with current browsers.
-The intended implementation requires almost no work for website owners and web developers.
+Recently created tools rise the opportunity to implement the proposed solutions.
+We believe that the previous lack of these tools to be the reason such solutions have not been implemented yet.
+These tools are ES6 Modules, ES6 Module Loaders, SystemJS, and JSPM.
+We will discuss how they considerably ease implementation in the "implementation details" documents.
 
-Creating a new issue if you think that you found a design flaw will be greatly appreciated.
+The proposed solutions and implementation are compatible with current browsers.
+
+The proposed implementation is designed such that its usage requires almost no work for website owners/developers.
+
+Feel free to create a new Issue.
+It will be greatly appreciated.
+Especially if you find a design flaw.
 
 
 
@@ -42,7 +49,7 @@ We propose solutions to all three problems.
 The solutions are based on the following;
 
 
-##### Solution to Problem 1: The source code of the CDN is verified using a secure hashing algorithm, e.g. SHA-256
+##### Solution to Problem 1: source code delivered by the CDN are verified using a secure hashing algorithm, e.g. SHA-256
 
 We verify that the secure hash of the source code delivered by the CDN matches the secure hash of the expected source code.
 
@@ -52,9 +59,9 @@ The secure hash of the required source code is precomputed and provided by the w
 Implementation details are described in https://github.com/brillout/FasterWeb/blob/master/UntrustedCDN.md.
 
 
-##### Solution to Problem 2: a fallback system in case the CDN is down or slow
+##### Solution to Problem 2: fallback to the website's server if the CDN is down or slow
 
-If the CDN is not able to deliver the required source code in a timely manner, we then fallback by retrieving the source code from the website's server.
+If the CDN is not able to deliver the required source code in a timely manner then we fallback by retrieving the source code from the website's server.
 
 Implementation details are described in https://github.com/brillout/FasterWeb/blob/master/UntrustedCDN.md.
 
