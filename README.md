@@ -77,7 +77,7 @@ At first, an implementation may seem cumbersome, but building an implementation 
 An ES6 Module Loader features useful characteristics that we can use:
   - An ES6 Module Loader loads source code asynchronously and makes the source code accessible to JavaScript land which is something we need to compute the secure hash
   - The process of loading source code of an ES6 Module Loader is easy to alter and extend
-  - ES6 Module Loaders have been designed to be statically analyse-able. This enables the server to know beforehand what source codes are going to be required. Hence we can precompute the secure hashes.
+  - ES6 Module Loaders have been designed to be statically analyse-able. This enables the server to know beforehand what source codes are going to be required. The server can therefore precompute the secure hashes.
 
 [SystemJS](https://github.com/systemjs/systemjs) is a production ready module loader built on top of a ES6 Module Loader [pollyfill](https://github.com/ModuleLoader/es6-module-loader).
 
