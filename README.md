@@ -80,11 +80,12 @@ An ES6 Module Loader features useful characteristics that we can use:
   - ES6 Module Loaders have been designed to be statically analyse-able. This enables the server to know beforehand what source codes are going to be required. The server can therefore precompute the secure hashes.
 
 [SystemJS](https://github.com/systemjs/systemjs) is a production ready module loader built on top of a ES6 Module Loader [pollyfill](https://github.com/ModuleLoader/es6-module-loader).
+The Client-Side implementation could therefore be built on top of SystemJS.
 
 [JSPM](https://github.com/jspm/jspm-cli) is a package manager for the frontend built on top of SystemJS.
 JSPM features a [Dependency Cache](https://github.com/jspm/jspm-cli/wiki/Production-Workflows#creating-a-dependency-cache) that already implements the computation of the whole dependency tree.
-
-Additionally a JSPM extension could be written to compute and deliver the secure hashes to the website.
+The [JSPM NPM Package](https://www.npmjs.com/package/jspm) exposes the computed dependency tree allowing it to be reused for our purpose of precomputing and delivering all required secure hashes to the website.
+The Server-Side implementation could therefore be build on top of JSPM.
 
 
 ### Solution to Problem 2
