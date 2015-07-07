@@ -2,7 +2,7 @@ This proposal's goal is to reduce the average time necessary for loading common 
 
 The goal is achieved by
  - solving the problems associated with using a CDN
- - introducing an `untrusted shared cache`
+ - introducing an _untrusted shared cache_
 
 Solving the CDN problems increases the incentive of using CDNs which have low latency and high bandwidth.
 
