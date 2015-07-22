@@ -24,6 +24,12 @@ It will be greatly appreciated.
 Especially if you find a design flaw.
 
 
+***********************************
+### Edit / Notice
+The [implementation](https://github.com/brillout/untrusted-shared-cache) is currently on hold because of the analysis done after inspecting the amount of duplication in the browser's cache, see https://github.com/brillout/inspect-browser-cache-duplication.
+For now the proposed _Untrusted Shared Cache_ solution is probably not worth the effort but this will likely change in the future.
+***********************************
+
 
 ### The Problems
 
